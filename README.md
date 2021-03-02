@@ -1,15 +1,24 @@
-Welcome to your new dbt project!
+# dbt app example
 
-### Using the starter project
+## Setup
 
-Try running the following commands:
-- dbt run
-- dbt test
+First, install dbt following [these installation instructions](https://docs.getdbt.com/dbt-cli/installation).
+For Mac:
+```
+brew update
+brew install git
+brew tap fishtown-analytics/dbt
+brew install dbt
+```
 
+This example uses a postgres database. Create one called `app_example_dbt`.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Next, you will need to teach dbt how to connect to postgres.
+In `dbt`, this lives in `~/.dbt/profiles.yml`.
+
+There is an example file checked into this repo as `profiles.example.yml`. Copy it to `~/.dbt/profiles.yml` and edit as needed.
+
+Finally, let's seed some data. This will create a `users` and a `purchases` table in your postgres database.
+```
+dbt seed
+```
