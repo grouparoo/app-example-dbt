@@ -22,3 +22,7 @@ Finally, let's seed some data. This will create a `users` and a `purchases` tabl
 ```
 dbt seed
 ```
+
+## Running dbt
+
+This project rolls the seeded `users` and `purchases` table up, creating a view called `customers`.
