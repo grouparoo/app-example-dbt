@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@grouparoo/core": "0.2.3",
+    "@grouparoo/mailchimp": "0.2.3",
+    "@grouparoo/postgres": "0.2.3",
     "@grouparoo/ui-community": "0.2.3"
   },
   "scripts": {
@@ -17,6 +19,8 @@
   },
   "grouparoo": {
     "plugins": [
+      "@grouparoo/mailchimp",
+      "@grouparoo/postgres",
       "@grouparoo/ui-community"
     ]
   }
