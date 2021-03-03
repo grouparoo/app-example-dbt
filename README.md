@@ -4,6 +4,7 @@
 
 First, install dbt following [these installation instructions](https://docs.getdbt.com/dbt-cli/installation).
 For Mac:
+
 ```
 brew update
 brew install git
@@ -19,6 +20,7 @@ In `dbt`, this lives in `~/.dbt/profiles.yml`.
 There is an example file checked into this repo as `profiles.example.yml`. Copy it to `~/.dbt/profiles.yml` and edit as needed.
 
 Finally, let's seed some data. This will create a `users` and a `purchases` table in your postgres database.
+
 ```
 dbt seed
 ```
