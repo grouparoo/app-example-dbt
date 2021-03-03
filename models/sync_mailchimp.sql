@@ -36,10 +36,11 @@ customer_orders as (
 final as (
 
     select
-      email,
-      first_name as FNAME,
-      lifetime_value AS LTV,
-      updated_at
+        customer_id,
+        email,
+        first_name as fname,
+        lifetime_value AS ltv,
+        updated_at
 
     from customers
 
