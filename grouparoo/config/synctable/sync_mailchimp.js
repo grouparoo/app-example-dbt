@@ -22,11 +22,11 @@ module.exports = async function getConfig() {
           listId: mailchimpListId,
         },
       },
-      sync: [
-        { email_address: { column: "email", type: "email" } },
-        "fname",
-        "ltv",
-      ],
+      sync: {
+        email_address: { column: "email", type: "email" },
+        FNAME: "first_name",
+        LTV: "lifetime_value",
+      },
     },
   ];
 };
