@@ -19,10 +19,23 @@ In `dbt`, this lives in `~/.dbt/profiles.yml`.
 
 There is an example file checked into this repo as `profiles.example.yml`. Copy it to `~/.dbt/profiles.yml` and edit as needed.
 
-Finally, let's seed some data. This will create a `users` and a `purchases` table in your Postgres database:
+Now, let's seed some data. This will create a `users` and a `purchases` table in your Postgres database:
 
 ```
 dbt seed
+```
+
+Finally, let's set up the Grouparoo `.env` file. These can also be set in the system `ENV`.
+
+```
+cp grouparoo/.env.example grouparoo/.env
+```
+
+You will need to edit the following environment variables to real ones if you want it to sync to Mailchimp:
+
+```
+MAILCHIMP_API_KEY=632d084f1bb6ff63e8336bd4864373ed-us3
+MAILCHIMP_LIST_ID=26d8e9db1e
 ```
 
 ## Run
