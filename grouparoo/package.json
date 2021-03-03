@@ -9,16 +9,18 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.2.3",
-    "@grouparoo/mailchimp": "0.2.3",
-    "@grouparoo/postgres": "0.2.3",
-    "@grouparoo/ui-community": "0.2.3"
+    "@grouparoo/core": "0.2.4-alpha.1",
+    "@grouparoo/dbt": "0.2.4-alpha.1",
+    "@grouparoo/mailchimp": "0.2.4-alpha.1",
+    "@grouparoo/postgres": "0.2.4-alpha.1",
+    "@grouparoo/ui-community": "0.2.4-alpha.1"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start"
   },
   "grouparoo": {
     "plugins": [
+      "@grouparoo/dbt",
       "@grouparoo/mailchimp",
       "@grouparoo/postgres",
       "@grouparoo/ui-community"
