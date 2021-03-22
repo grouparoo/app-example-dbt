@@ -1,7 +1,7 @@
 {
   "author": "Grouparoo Inc <hello@grouparoo.com>",
   "name": "@grouparoo/app-example",
-  "description": "An example Grouparoo Deployment",
+  "description": "An example Grouparoo Deployment using a dbt warehouse",
   "version": "0.0.1",
   "license": "MPL-2.0",
   "private": true,
@@ -9,11 +9,11 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.2.4-alpha.1",
-    "@grouparoo/dbt": "0.2.4-alpha.1",
-    "@grouparoo/mailchimp": "0.2.4-alpha.1",
-    "@grouparoo/postgres": "0.2.4-alpha.1",
-    "@grouparoo/ui-community": "0.2.4-alpha.1"
+    "@grouparoo/core": "0.2.7",
+    "@grouparoo/dbt": "0.2.7",
+    "@grouparoo/mailchimp": "0.2.7",
+    "@grouparoo/postgres": "0.2.7",
+    "@grouparoo/ui-community": "0.2.7"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start"
