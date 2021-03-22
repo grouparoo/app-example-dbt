@@ -1,4 +1,9 @@
+const { dbtProfile } = require("@grouparoo/dbt");
+
 exports.default = async function buildConfig() {
+  // fetch warehouse type from parent dbt profile
+  const { type } = await dbtProfile({});
+
   return [
     /**
      * --------------------
@@ -9,7 +14,7 @@ exports.default = async function buildConfig() {
       class: "source",
       id: "mailchimp_data",
       name: "Mailchimp Data",
-      type: "postgres-table-import",
+      type: type + "-table-import",
       appId: "warehouse", // Set this value to the ID of the App this Source uses - e.g. `appId: "data_warehouse"`
       options: {
         table: "sync_mailchimp", // Name of the table in your DB - e.g. `table: "users"`
@@ -59,7 +64,7 @@ exports.default = async function buildConfig() {
      */
     {
       id: "sync_mailchimp_schedule",
-      name: "sync_mailchimp_schedule",
+      name: "Mailchimp Data Schedule",
       class: "schedule",
       sourceId: "mailchimp_data", // The ID of the Source above
       recurring: true, // should this Schedule regularly run?
