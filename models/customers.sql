@@ -5,6 +5,7 @@ with customers as (
         email,
         first_name,
         last_name,
+        language,
         updated_at
 
     from users
@@ -47,6 +48,7 @@ final as (
         customers.email,
         customers.first_name,
         customers.last_name,
+        customers.language,
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
         coalesce(customer_orders.number_of_orders, 0) as number_of_orders,

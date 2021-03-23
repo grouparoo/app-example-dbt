@@ -10,6 +10,7 @@ final as (
         customer_id,
         email,
         first_name,
+        language,
         lifetime_value,
         updated_at
 
