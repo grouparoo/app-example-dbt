@@ -13,10 +13,13 @@
     "@grouparoo/dbt": "0.2.7",
     "@grouparoo/mailchimp": "0.2.7",
     "@grouparoo/postgres": "0.2.7",
-    "@grouparoo/ui-community": "0.2.7"
+    "@grouparoo/ui-community": "0.2.7",
+    "grouparoo": "0.2.7"
   },
   "scripts": {
-    "start": "cd node_modules/@grouparoo/core && ./bin/start"
+    "start": "cd node_modules/@grouparoo/core && ./bin/start",
+    "sync": "grouparoo run",
+    "test": "grouparoo validate"
   },
   "grouparoo": {
     "plugins": [

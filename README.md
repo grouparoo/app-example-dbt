@@ -25,6 +25,12 @@ Now, let's seed some data. This will create a `users` and a `purchases` table in
 dbt seed
 ```
 
+Now, we install Node.js for Grouparoo to use. This project has an `.nvmrc` file, so it will be in a v14 `nvm` instance if you use that. Otherwise, use Node.js version 12+.
+
+```
+cd grouparoo && npm install
+```
+
 Finally, let's set up the Grouparoo `.env` file. These can also be set in the system `ENV`.
 
 ```
@@ -50,7 +56,7 @@ It is relatively simple if you want to do them separately:
 
 ```
 dbt run
-cd grouparoo && grouparoo run
+cd grouparoo && npm run sync
 ```
 
 ## dbt

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
 dbt run
-cd grouparoo && grouparoo run
+cd grouparoo && npm run sync
