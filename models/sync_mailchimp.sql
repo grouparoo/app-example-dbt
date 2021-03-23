@@ -10,7 +10,8 @@ final as (
         customer_id,
         email,
         first_name,
-        lifetime_value,
+        language,
+        ltv,
         updated_at
 
     from customers
