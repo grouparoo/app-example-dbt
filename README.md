@@ -12,9 +12,9 @@ brew tap fishtown-analytics/dbt
 brew install dbt
 ```
 
-This example uses a Postgres database. Create one called `app_example_dbt`.
+This example uses a Postgres database, though it also works with other data warehouses with the necessary SQL updates. Create one called `app_example_dbt`.
 
-Next, you will need to teach dbt how to connect to Postgres.
+Next, you will need to teach dbt how to connect to your warehouse.
 In `dbt`, this lives in `~/.dbt/profiles.yml`.
 
 There is an example file checked into this repo as `profiles.example.yml`. Copy it to `~/.dbt/profiles.yml` and edit as needed.
@@ -62,6 +62,6 @@ This project transforms the seeded `users` and `purchases` table into a few view
 
 ## Grouparoo
 
-Handle syncing data to destinations, using the Postgres as a warehouse.
+Handles syncing data to destinations, using Postgres as a warehouse.
 
 It syncs customers' emails, first name, and lifetime value from the `sync_mailchimp` table.
