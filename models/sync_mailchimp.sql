@@ -11,7 +11,7 @@ final as (
         email,
         first_name,
         language,
-        lifetime_value,
+        ltv,
         updated_at
 
     from customers
