@@ -1,5 +1,7 @@
 # dbt app example
 
+This project shows and example how to integrate a [dbt](https://www.getdbt.com/) and a [Grouparoo](https://www.grouparoo.com/) project. The dbt models transform the data and the Grouparoo config syncs the result to a destination.
+
 ## Setup
 
 First, install dbt following [these installation instructions](https://docs.getdbt.com/dbt-cli/installation).
