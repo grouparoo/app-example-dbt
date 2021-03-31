@@ -2,7 +2,7 @@
 
 This project shows and example how to integrate a [dbt](https://www.getdbt.com/) and a [Grouparoo](https://www.grouparoo.com/) project. The dbt models transform the data and the Grouparoo config syncs the result to a destination.
 
-![dbt and Grouparoo workflow](https://www.grouparoo.com/_next/image?url=%2Fposts%2Fdbt-and-grouparoo%2Fworkflow.png&w=640&q=25)
+![dbt and Grouparoo workflow](https://www.grouparoo.com/_next/image?url=%2Fposts%2Fdbt-and-grouparoo%2Fworkflow.png&w=896&q=35)
 
 Get more details in the [blog post](https://www.grouparoo.com/blog/dbt-and-grouparoo).
 
