@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.BOT_GITHUB_PAT }}
       - run: cd grouparoo && npm install
       - run: sudo npm install -g npm-check-updates
       - run: cd grouparoo && npm-check-updates -u
