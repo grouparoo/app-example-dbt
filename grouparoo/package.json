@@ -13,7 +13,7 @@
     "@grouparoo/dbt": "0.3.3",
     "@grouparoo/mailchimp": "0.3.3",
     "@grouparoo/postgres": "0.3.3",
-    "@grouparoo/ui-community": "0.3.3",
+    "@grouparoo/ui-community": "0.4.1",
     "grouparoo": "0.3.3"
   },
   "scripts": {
