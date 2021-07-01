@@ -9,7 +9,7 @@
     "node": ">=12.0.0 <16.0.0"
   },
   "dependencies": {
-    "@grouparoo/core": "0.4.1",
+    "@grouparoo/core": "0.4.2",
     "@grouparoo/dbt": "0.4.1",
     "@grouparoo/mailchimp": "0.4.1",
     "@grouparoo/postgres": "0.4.1",
