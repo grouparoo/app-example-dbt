@@ -14,7 +14,7 @@
     "@grouparoo/mailchimp": "0.4.2",
     "@grouparoo/postgres": "0.4.2",
     "@grouparoo/ui-community": "0.4.2",
-    "grouparoo": "0.4.2"
+    "grouparoo": "0.4.3"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",
