@@ -11,7 +11,7 @@
   "dependencies": {
     "@grouparoo/core": "0.4.2",
     "@grouparoo/dbt": "0.4.2",
-    "@grouparoo/mailchimp": "0.4.2",
+    "@grouparoo/mailchimp": "0.4.3",
     "@grouparoo/postgres": "0.4.2",
     "@grouparoo/ui-community": "0.4.2",
     "grouparoo": "0.4.2"
