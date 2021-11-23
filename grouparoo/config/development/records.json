@@ -1,0 +1,10 @@
+[
+  {
+    "id": "rec_0fd775e4-8b96-4d54-bb37-54d61362d72e",
+    "class": "Record",
+    "modelId": "customers",
+    "properties": {
+      "customer_id": ["30"]
+    }
+  }
+]

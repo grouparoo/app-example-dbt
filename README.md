@@ -46,8 +46,8 @@ cp grouparoo/.env.example grouparoo/.env
 You will need to edit the following environment variables to real ones if you want it to sync to Mailchimp:
 
 ```
-MAILCHIMP_API_KEY=632d084f1bb6ff63e8336bd4864373ed-us3
-MAILCHIMP_LIST_ID=26d8e9db1e
+GROUPAROO_OPTION__APP__MAILCHIMP_API_KEY=632d084f1bb6ff63e8336bd4864373ed-us3
+GROUPAROO_OPTION__DESTINATION__MAILCHIMP_LIST_ID=26d8e9db1e
 ```
 
 ## Run

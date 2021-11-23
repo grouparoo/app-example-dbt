@@ -1,0 +1,21 @@
+{
+  "class": "Destination",
+  "id": "mailchimp_destination",
+  "modelId": "customers",
+  "name": "Mailchimp",
+  "type": "mailchimp-export-contacts",
+  "appId": "mailchimp",
+  "collection": "model",
+  "syncMode": "sync",
+  "options": {
+    "listId": "MAILCHIMP_LIST_ID"
+  },
+  "mapping": {
+    "FNAME": "first_name",
+    "LTV": "ltv",
+    "email_address": "email"
+  },
+  "destinationGroupMemberships": {
+    "high_value_spanish": "high_value_spanish_speakers"
+  }
+}
