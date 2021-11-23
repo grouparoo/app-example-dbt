@@ -3,6 +3,7 @@ exports.default = async function buildConfig() {
     {
       class: "group",
       id: "all_emails",
+      modelId: "customers",
       name: "All Emails",
       type: "calculated",
 

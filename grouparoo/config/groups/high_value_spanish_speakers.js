@@ -3,6 +3,7 @@ exports.default = async function buildConfig() {
     {
       class: "group",
       id: "high_value_spanish_speakers",
+      modelId: "customers",
       name: "High Value Spanish Speakers",
       type: "calculated",
 
