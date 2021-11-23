@@ -28,5 +28,8 @@
       "@grouparoo/postgres",
       "@grouparoo/ui-community"
     ]
+  },
+  "devDependencies": {
+    "@grouparoo/ui-config": "0.7.4"
   }
 }
