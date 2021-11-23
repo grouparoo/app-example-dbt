@@ -6,10 +6,11 @@ exports.default = async function buildConfig() {
       id: "mailchimp_destination",
       name: "Mailchimp",
       class: "destination",
-      type: "mailchimp-export",
+      type: "mailchimp-export-contacts",
       appId: "mailchimp", // The ID of the App this Source uses - e.g. `appId: "mailchimp_app"`
+      modelId: "customers",
       syncMode: "sync", // keep Mailchimp up to date with group
-      groupId: "all_emails", // The ID of the group whose members you want to export - e.g. `groupId: "high_value_customers"`
+      collection: "model", // sync everyone in this model
 
       options: {
         listId: mailchimpListId, // The Mailchimp List ID (https://mailchimp.com/help/find-audience-id/)

@@ -14,8 +14,9 @@ exports.default = async function buildConfig() {
       class: "source",
       id: "mailchimp_data",
       name: "Mailchimp Data",
-      type: type + "-table-import",
+      type: type + "-import-table",
       appId: "warehouse", // Set this value to the ID of the App this Source uses - e.g. `appId: "data_warehouse"`
+      modelId: "customers",
       options: {
         table: "sync_mailchimp", // Name of the table in your DB - e.g. `table: "users"`
       },
