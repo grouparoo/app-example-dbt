@@ -23,6 +23,9 @@ clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_modules"
 
+# This is how we generate our meta table with data that will be used by our app refresh query.  It runs the on_run_end macro
+on-run-end: "{{ on_run_end(results) }}"
+
 seeds:
   quote_columns: false
   my_new_project:

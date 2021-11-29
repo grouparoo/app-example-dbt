@@ -10,6 +10,10 @@ exports.default = async function buildConfig() {
       name: "Warehouse",
       type,
       options,
+      refresh: {
+        query: "SELECT MAX(last_run_at) FROM dbt_meta WHERE error=0",
+        recurringFrequency: 60000,
+      },
     },
   ];
 };
