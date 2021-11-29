@@ -52,18 +52,19 @@ GROUPAROO_OPTION__DESTINATION__MAILCHIMP_LIST_ID=26d8e9db1e
 
 ## Run
 
-There is a script that runs both dbt and Grouparoo:
+To run this project, we'll start the Grouparoo server:
 
 ```
-./transform_and_sync
+cd grouparoo && npm start
 ```
 
-It is relatively simple if you want to do them separately:
+Then, to trigger a dbt run, in another tab at the root of this project run:
 
 ```
 dbt run
-cd grouparoo && npm run sync
 ```
+
+When the run completes, a new row will be added to the `dbt_meta` table. The `refresh` set up in our `App` configuration file will see the update and enqueue all schedules within the next minute.
 
 ## dbt
 
