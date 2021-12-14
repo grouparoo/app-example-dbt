@@ -11,8 +11,8 @@ exports.default = async function buildConfig() {
       type,
       options,
       refresh: {
-        query: "SELECT MAX(last_run_at) FROM dbt_meta WHERE error=0",
-        recurringFrequency: 60000,
+        query: "SELECT MAX(last_run_at) FROM dbt_meta",
+        recurringFrequency: 60 * 1000,
       },
     },
   ];
