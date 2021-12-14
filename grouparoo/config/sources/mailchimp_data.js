@@ -56,6 +56,7 @@ exports.default = async function buildConfig() {
       sourceId: "mailchimp_data", // The ID of the Source above
       recurring: true, // should this Schedule regularly run?
       recurringFrequency: 1000 * 60 * 15, // 15 minutes, in ms
+      refreshEnabled: true,
       options: {
         column: "updated_at", // the column to check for new records in table which this Schedule's Source is using (e.g. column: 'updated_at')
       },

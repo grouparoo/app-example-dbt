@@ -1,10 +1,10 @@
 # dbt app example
 
-This project shows and example how to integrate a [dbt](https://www.getdbt.com/) and a [Grouparoo](https://www.grouparoo.com/) project. The dbt models transform the data and the Grouparoo config syncs the result to a destination.
+This project shows and example how to integrate a [dbt](https://www.getdbt.com/) and a [Grouparoo](https://www.grouparoo.com/) project. The dbt models transform the data and the Grouparoo config syncs the result to a destination. Please note that this project is configured using dbt 1.0.0.
 
 ![dbt and Grouparoo workflow](https://www.grouparoo.com/_next/image?url=%2Fposts%2Fdbt-and-grouparoo%2Fworkflow.png&w=640&q=25)
 
-Get more details in the [blog post](https://www.grouparoo.com/blog/dbt-and-grouparoo).
+Get more details in our [blog post](https://www.grouparoo.com/blog/dbt-and-grouparoo) about our dbt integration or this post on how to [use App Refresh to run Grouparoo with dbt](https://www.grouparoo.com/blog/app-refresh-grouparoo-and-dbt).
 
 ## Setup
 
@@ -52,18 +52,31 @@ GROUPAROO_OPTION__DESTINATION__MAILCHIMP_LIST_ID=26d8e9db1e
 
 ## Run
 
-There is a script that runs both dbt and Grouparoo:
+### App Refresh Query
+
+One way to run this Grouparoo instance is to utilize the App Refresh Query added in the App config. To do this run:
+
+```
+cd grouparoo && npm start
+```
+
+This will also allow you to run our UI Community package by opening `http://localhost:3000` in your browser. Here, you can create a Team and watch the progress of your data from your Dashboard. Next, to trigger a dbt run, in another tab at the root of this project run:
+
+```
+dbt run
+```
+
+When the run completes, a new row will be added to the `dbt_meta` table. The `refresh` set up in our `App` configuration file will see the update and enqueue all schedules within the next minute. When you are ready to transform and run again, you simply need to `dbt run` again.
+
+### Script
+
+You can also run the script found in `./transform_and_sync`:
 
 ```
 ./transform_and_sync
 ```
 
-It is relatively simple if you want to do them separately:
-
-```
-dbt run
-cd grouparoo && npm run sync
-```
+This will trigger a dbt run, then run all of the Grouparoo schedules once, and then terminate.
 
 ## dbt
 

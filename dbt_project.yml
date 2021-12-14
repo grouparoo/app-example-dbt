@@ -9,9 +9,9 @@ config-version: 2
 profile: "app-example-dbt"
 
 # These configurations specify where dbt should look for different types of files.
-# The `source-paths` config, for example, states that models in this project can be
+# The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-source-paths: ["models"]
+model-paths: ["models", "data"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -22,6 +22,9 @@ target-path: "target" # directory which will store compiled SQL files
 clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_modules"
+
+# This is how we generate our meta table with data that will be used by our app refresh query.  It runs the on_run_end macro
+on-run-end: "{{ on_run_end(results) }}"
 
 seeds:
   quote_columns: false
